@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video Editor</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </head>
+  <body>
+    <h1>Video Editor</h1>
+    <div class="container">
+      <div class="left-panel">
+        <div class="import-container">
+          <button onclick="loadVideoFromUrl()">Load Video</button>
+          <br>
+          <input type="text" id="url-input" placeholder="Enter video URL">
+          <br>
+          <input type="file" id="file-input" onchange="loadVideo()">
+        </div>
+        <div class="file-container">
+          <ul>
+            <li>File 1</li>
+            <li>File 2</li>
+            <li>File 3</li>
+          </ul>
+        </div>
+        <div class="media-container">
+          <div class="media-preview"></div>
+          <div class="media-info"></div>
+        </div>
+      </div>
+      <div class="right-panel">
+        <div class="preview-container">
+            <video id="preview" controls></video>
+        </div>
+        <div id="timeline"></div>
+        <div class="options-container">
+          <button onclick="trim()">Trim</button>
+          <button onclick="addFilter()">Add Filter</button>
+          <button onclick="createTemplate()">Create Template</button>
+          <button onclick="applyTemplate()">Apply Template</button>
+          <button onclick="download()">Download</button>
+          <button onclick="moveFile()">Move File</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
